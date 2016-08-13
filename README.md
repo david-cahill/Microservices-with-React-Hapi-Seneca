@@ -20,5 +20,5 @@ Each microservice then replies with some test data.
 - Add some Hapi routes.
 
 # Any questions/suggestions?
-Please feel free to create an issue or create a pull request with your suggestion.
+Please feel free to send me an email/create an issue or create a pull request with your suggestion.
 
