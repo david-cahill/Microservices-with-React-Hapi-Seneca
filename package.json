@@ -1,0 +1,38 @@
+{
+  "name": "react-hapi-seneca",
+  "version": "0.0.1",
+  "description": "This repo demonstrates how you would setup a React application that communicates with multiple node js microservices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/",
+    "start": "node ."
+  },
+  "keywords": [
+    "react",
+    "seneca",
+    "node",
+    "node",
+    "js",
+    "node.js",
+    "javascript",
+    "hapi",
+    "microservices"
+  ],
+  "author": "David Cahill <davidrichardcahill@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.4",
+    "chairo": "2.2.1",
+    "hapi": "14.1.0",
+    "react": "15.3.0",
+    "seneca": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "webpack": "1.12.13"
+  }
+}
