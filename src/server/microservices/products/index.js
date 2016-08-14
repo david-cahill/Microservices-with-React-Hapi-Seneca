@@ -1,2 +1,4 @@
 require('babel-register')
-require('./products.js')
+const config = require('./config')
+const seneca = require('seneca')(config)
+seneca.use(require('./products.js'))

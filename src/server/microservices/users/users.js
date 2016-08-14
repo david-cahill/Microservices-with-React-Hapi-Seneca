@@ -1,16 +1,17 @@
 'use strict'
-import config from './config'
-const seneca = require('seneca')(config)
-const role = 'users'
+module.exports = function () {
+  const seneca = this
+  const role = 'users'
 
-seneca.add({role, cmd: 'whazzup'}, cmd_whazzup)
+  seneca.add({role, cmd: 'whazzup'}, cmd_whazzup)
 
-seneca.listen()
+  seneca.listen()
 
-seneca.ready(() => {
-  process.send('ready')
-})
+  seneca.ready(() => {
+    process.send('ready')
+  })
 
-function cmd_whazzup (args, done) {
-  return done(null, {reply: 'yo!' })
+  function cmd_whazzup (args, done) {
+    return done(null, {reply: 'yo!' })
+  }
 }
