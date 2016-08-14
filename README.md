@@ -14,11 +14,11 @@ Each microservice then replies with some test data.
 
 # To do
 
-- Add a simple React application.
-- Make API requests to each microservice from the React app.
-- Render some data in the UI based on the response from the API.
-- Add some Hapi routes.
-- Add some tests.
+- [x] Add a simple React application.
+- [ ] Make API requests to each microservice from the React app.
+- [ ] Render some data in the UI based on the response from the API.
+- [ ] Add some Hapi routes.
+- [ ] Add some tests.
 
 # Any questions/suggestions?
 Please feel free to send me an email/create an issue or create a pull request with your suggestion.
