@@ -1,9 +1,11 @@
 'use strict'
 import { Server } from 'hapi'
+import Inert from 'inert'
 import chairo from 'chairo'
 import { fork } from 'child_process'
 import { resolve } from 'path'
 import options from '../../config/chairo-options'
+import routes from './routes'
 const server = new Server()
 const port = process.env.port || 3000
 
@@ -11,6 +13,8 @@ const products = fork(resolve(__dirname, './microservices/products'))
 const users = fork(resolve(__dirname, './microservices/users'))
 
 server.connection({ port })
+
+server.register(Inert, () => server.route(routes))
 
 server.register({ register: chairo, options }, (err) => {
   if (err) throw console.log(err)
@@ -20,14 +24,10 @@ server.register({ register: chairo, options }, (err) => {
     if (err) throw console.log(err)
     console.log(`Server running on ${server.info.uri}`)
     users.on('message', (m) => {
-      if (m === 'ready') {
-        requestDataFromUsersMicroservice(seneca)
-      }
+      if (m === 'ready') requestDataFromUsersMicroservice(seneca)
     })
     products.on('message', (m) => {
-      if (m === 'ready') {
-        requestDataFromProductsMicroservice(seneca)
-      }
+      if (m === 'ready') requestDataFromProductsMicroservice(seneca)
     })
   })
 })

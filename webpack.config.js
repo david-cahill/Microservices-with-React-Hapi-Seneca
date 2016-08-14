@@ -1,10 +1,10 @@
 module.exports = {
   entry: [
     'babel-polyfill',
-    './index.js'
+    './src/client/client.jsx'
   ],
   output: {
-    path: __dirname + '/build',
+    path: __dirname + '/public',
     filename: 'bundle.js'
   },
   plugins: [],
