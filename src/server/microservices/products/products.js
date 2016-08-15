@@ -11,6 +11,6 @@ module.exports = function () {
   }
 
   seneca.ready(() => {
-    process.send('ready')
+    if (process && process.send) process.send('ready')
   })
 }

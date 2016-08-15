@@ -7,11 +7,11 @@ module.exports = function () {
 
   seneca.listen()
 
-  seneca.ready(() => {
-    process.send('ready')
-  })
-
   function cmd_whazzup (args, done) {
     return done(null, {reply: 'yo!' })
   }
+
+  seneca.ready(() => {
+    if (process && process.send) process.send('ready')
+  })
 }

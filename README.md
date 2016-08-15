@@ -1,4 +1,4 @@
-# Microservices-with-React-Hapi-Seneca
+# Microservices with React, Hapi & Seneca
 This repo demonstrates how you would setup a React application that communicates with multiple node js microservices.
 
 # What is this?
