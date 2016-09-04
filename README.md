@@ -10,15 +10,29 @@ Each microservice then replies with some test data.
 
 - npm install
 - npm start
-- Check server-side console to see each microservice's response
+- Check server-side console to see each microservice's response.
+- Check Chrome network tab to see REST API request to '/api/0.1/products'.
+- Check http://localhost:3000 to see response from product's microservice.
 
 # To do
 
 - [x] Add a simple React application.
-- [ ] Make API requests to each microservice from the React app.
-- [ ] Render some data in the UI based on the response from the API.
-- [ ] Add some Hapi routes.
-- [ ] Add some tests.
+- [x] Make API requests to each microservice from the React app.
+- [x] Render some data in the UI based on the response from the API.
+- [x] Add some Hapi routes.
+- [x] Add some tests.
+
+# Main stack used
+
+- React with Redux
+- Hapi
+- Seneca
+- Babel
+- Node.js
+- Superagent
+- Webpack
+
+(See package.json for more)
 
 # Any questions/suggestions?
 Please feel free to send me an email/create an issue or create a pull request with your suggestion.
