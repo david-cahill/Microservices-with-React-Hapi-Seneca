@@ -14,10 +14,9 @@ const users = fork(resolve(__dirname, './microservices/users'))
 
 server.connection({ port })
 
-server.register(Inert, () => server.route(routes))
-
 server.register({ register: chairo, options }, (err) => {
   if (err) throw console.log(err)
+  server.register(Inert, () => server.route(routes))
   const { seneca } = server
   options.client.forEach((microservice) => seneca.client(microservice))
   server.start((err) => {
