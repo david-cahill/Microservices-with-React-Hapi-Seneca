@@ -24,7 +24,8 @@ Each microservice then replies with some test data.
 
 # Main stack used
 
-- React with Redux
+- React with Redux and Redux-Observable
+- RxJS
 - Hapi
 - Seneca
 - Babel
