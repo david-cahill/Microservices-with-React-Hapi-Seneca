@@ -1,9 +1,9 @@
 import superagent from 'superagent'
 
-function setProducts(products) {
+function setProducts(productsList) {
   return {
     type: 'SET_PRODUCTS',
-    products
+    productsList
   }
 }
 

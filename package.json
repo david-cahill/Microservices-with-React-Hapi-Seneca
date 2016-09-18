@@ -4,7 +4,7 @@
   "description": "This repo demonstrates how you would setup a React application that communicates with multiple node js microservices.",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node . | node webpack-dev-server.js",
     "build": "webpack",
     "test": "node -r babel-polyfill node_modules/.bin/lab -t 100 -S -T ./node_modules/lab-babel --leaks ./test -c"
   },
@@ -32,7 +32,9 @@
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "redux-observable": "^0.11.0",
     "redux-thunk": "^2.1.0",
+    "rxjs": "^5.0.0-beta.12",
     "seneca": "^2.1.0",
     "superagent": "^2.2.0"
   },
@@ -46,6 +48,7 @@
     "code": "^3.0.2",
     "lab": "^10.9.0",
     "lab-babel": "^1.1.1",
-    "webpack": "1.12.13"
+    "webpack": "1.12.13",
+    "webpack-dev-server": "^1.16.1"
   }
 }
